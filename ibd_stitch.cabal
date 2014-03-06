@@ -1,0 +1,20 @@
+name:           IbdStitch
+version:        0.0
+synopsis:       A program for sampling joint IBD states from genetic marker data
+author:         Chris Glazner
+license:        BSD3
+build-type:     Simple
+cabal-version:  >= 1.2
+
+executable ibd_stitch 
+  build-depends: base, containers , mtl, parallel, 
+      random, array, deepseq, time, 
+      hmatrix==0.15.2.0, parsec==3.1.5, 
+      MonadRandom==0.1.13, ListZipper==1.2.0.2, 
+      random-shuffle==0.0.4, stream-fusion==0.1.2.5, 
+      polynomial==0.6.5, lens==4.0.3, 
+      bimap==0.2.4, vector==0.10.9.1, pretty-show==1.6.7
+
+  main-is:        Main.hs
+  hs-source-dirs: src
+  ghc-options: -O2 -threaded -rtsopts -static
