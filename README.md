@@ -66,12 +66,6 @@ The seed for the pseudorandom number generator.
 Download 
 -----------------
 
-### Binary
-<!-- A 64-bit Linux binary is available [here](http://www.stat.washington.edu/~cglazner/ibd_stitch). It was built on Ubuntu 12.04 LTS.  You must have `gsl` and `lapack` installed to run it; on Ubuntu, this is
-
-       apt get install libgsl0ldbl
-       apt get install liblapack3gf -->
-
 ### Build from source
 Building requires the [Haskell Platform](http://www.haskell.org/platform/).  Building has only been tested on Ubuntu 12.04 LTS, but the following steps should be cross-platform. There are other ways to install a cabal package, but this has worked best for me. Testing performed with GHC 7.4.1.
 
