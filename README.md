@@ -84,7 +84,9 @@ Building requires the [Haskell Platform](http://www.haskell.org/platform/).  Bui
 
          cabal install cabal-dev
 
-3. Move to the `ibd_stitch` directory
+3. Clone the github repository, and move into the new directory
+         
+         git clone https://github.com/cglazner/ibd_stitch
 
 4. Build the cabal package, installing dependencies locally
 

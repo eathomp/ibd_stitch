@@ -13,7 +13,8 @@ executable ibd_stitch
       MonadRandom==0.1.13, ListZipper==1.2.0.2, 
       random-shuffle==0.0.4, stream-fusion==0.1.2.5, 
       polynomial==0.6.5, lens==4.0.3, 
-      bimap==0.2.4, vector==0.10.9.1, pretty-show==1.6.7
+      bimap==0.2.4, vector==0.10.9.1, pretty-show==1.6.7,
+      tf-random==0.4
 
   main-is:        Main.hs
   hs-source-dirs: src

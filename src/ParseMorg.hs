@@ -61,7 +61,6 @@ checkConfig assoc = case assoc of
                       , nullFrac = gv "transition matrix null fraction"
                       , seed = gv "seed"
                       , hapSetSize = 4 -- HARD CODE
-                      , logFile = gv "logfile"
                       , genoError = gv "genotyping error rate"
                       , phaseFlag = getPhase hss x}
                  where gv :: (Read a) => String -> a

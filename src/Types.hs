@@ -16,6 +16,7 @@ import qualified Data.Bimap as BMap
 import Data.Word
 import Data.List.Stream (foldl')
 import Control.Monad.Random
+import System.Random.TF
 import Control.Applicative
 import Math.Polynomial (Poly)
 import MyPart as MP
@@ -79,7 +80,7 @@ fromMask (Constraint x) = Prelude.map (testBit x) . take magicFifteen $ [0..]
 
 
 type ModelR = Reader ModelInfo
-type ModelSimR = RandT StdGen (Reader ModelInfo)
+type ModelSimR = RandT TFGen (Reader ModelInfo)
 
 type FglList = [(Int, Int)] -- (fgl, location)
 type StateList = [(Int, Int)]
@@ -96,7 +97,6 @@ data Config = Config { markerFile :: FilePath
                      , iterations :: Maybe Int
                      , outFile :: FilePath
                      , seed :: Int
-                     , logFile :: FilePath
                      , popKin :: Double
                      , changeRate :: Double
                      , nullFrac :: Double

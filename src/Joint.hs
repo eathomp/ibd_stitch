@@ -7,6 +7,7 @@ import Fgl
 import Poset (geq)
 
 import System.Random 
+import System.Random.TF
 import System.Random.Shuffle (shuffleM)
 import Control.Monad.Random
 import Data.List.Zipper as DZ hiding (insert)
@@ -128,10 +129,10 @@ dairsArray inds = DV.fromList $ map equiv_pairs statesFour
               zup (x:xs) = map ((,) x) xs
 
 -- feels bad, this is just to pull stuff together at the top level
-fglGraph ::  [Indiv] -> ModelInfo -> StdGen -> Int -> [(String, FglList)]
+fglGraph ::  [Indiv] -> ModelInfo -> TFGen -> Int -> [(String, FglList)]
 fglGraph inds mi gen i = trace ("Doing iteration " ++ show i) $ uncurry indsToFglLists . (buildJointIbd gen mi  &&& id) $ inds
 
-buildJointIbd :: StdGen -> ModelInfo -> [Indiv] -> IbdResults
+buildJointIbd :: TFGen -> ModelInfo -> [Indiv] -> IbdResults
 buildJointIbd g mi inds = flip runReader mi . flip evalRandT g $ do
     randInds <- DZ.fromList `fmap` shuffleM inds
     n <- asks (DV.length . markers)
