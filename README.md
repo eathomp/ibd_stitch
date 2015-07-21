@@ -4,6 +4,7 @@
 `ibd_stitch` is a program for sampling identity by descent (IBD) among individuals in a population from genetic marker data.  While it is not a part of the 
  [MORGAN][morg] software suite, it was developed in the same research group and as a result uses similar configuration, input, and output file formats. In many cases this documentation will refer to MORGAN formats and documentation.
 
+Edit test.
 
 Running 
 -------
